@@ -23,12 +23,13 @@ public class CadastroDao {
 				saida.append("Sexo: " + pBean.getSexo());
 				saida.append("\n");
 				saida.append("Sobrenome: " + pBean.getSobreNome());
+
+				return saida.toString();
+
 			} catch (Exception e) {
 				System.out.println("Erro ao processar a informação " + e);
 				return ERRO;
 			}
-
-			return saida.toString();
 
 		} else if (obj instanceof EnderecoBean) {
 
@@ -47,7 +48,6 @@ public class CadastroDao {
 				return saida.toString();
 
 			} catch (Exception e) {
-
 				System.out.println("Erro ao processar a informação " + e);
 				return ERRO;
 			}
